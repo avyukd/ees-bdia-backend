@@ -6,7 +6,7 @@ import os
 import PyPDF2
 from nltk import tokenize
 import string
-#import nltk
+import nltk
 from nltk.stem.wordnet import WordNetLemmatizer
 
 req_keywords = set(["shall", "must", "will","should","require","include"])
@@ -19,7 +19,7 @@ def cleanup():
     #remove all pdf files in current directory
     print("In Cleanup...")
     for file in os.listdir():
-        if file.endswith(".pdf"):
+        if file.endswith(".pdf") and file != "test.pdf":
             os.remove(file)
             
 def clean_sentence(s):
@@ -34,6 +34,11 @@ def score_sentence(s):
     return (len(s.intersection(req_keywords)) > 0) * (len(s.intersection(subject_keywords)) > 0) * (len(s.intersection(general_keywords)))
 
 def parse_RFP(file):
+    try:
+        nltk.data.find('tokenizers/punkt')
+    except LookupError:
+        nltk.download('punkt')
+
     extension = file.split(".")[-1].lower()
     all_sentences = []
     if extension == "pdf":
