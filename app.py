@@ -1,12 +1,3 @@
-from flask import Flask
-
-app = Flask(__name__)
-
-@app.route("/")
-def index():
-    return "Hello this is the new version!"
-
-'''
 #create flask api
 from flask import Flask, jsonify, request, after_this_request
 import requests
@@ -109,7 +100,7 @@ def get_company_info():
         return jsonify(responseobj)
     except:
         return jsonify({})
-
+'''
 #figure out how to delete file after it closes
 @app.route('/api/parser', methods = ['POST'])
 def upload_file():
