@@ -113,6 +113,8 @@ def upload_file():
     return jsonify({'sentences': ordered_sentences[:10]})
 
 atexit.register(cleanup)
-app.run(debug=True) 
+
+if __name__ == '__main__':
+    app.run(debug=True) 
 
 
