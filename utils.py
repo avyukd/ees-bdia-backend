@@ -34,10 +34,7 @@ def score_sentence(s):
     return (len(s.intersection(req_keywords)) > 0) * (len(s.intersection(subject_keywords)) > 0) * (len(s.intersection(general_keywords)))
 
 def parse_RFP(file):
-    try:
-        nltk.data.find('tokenizers/punkt')
-    except LookupError:
-        nltk.download('punkt')
+    nltk.download('punkt')
 
     extension = file.split(".")[-1].lower()
     all_sentences = []
