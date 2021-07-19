@@ -1,3 +1,12 @@
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def index():
+    return "Hello this is the new version!"
+
+'''
 #create flask api
 from flask import Flask, jsonify, request, after_this_request
 import requests
@@ -116,5 +125,5 @@ atexit.register(cleanup)
 
 if __name__ == '__main__':
     app.run(debug=True) 
-
+'''
 
