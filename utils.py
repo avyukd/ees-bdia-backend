@@ -38,7 +38,13 @@ def parse_RFP(file):
         nltk.data.find('tokenizers/punkt')
     except LookupError:
         nltk.download('punkt')
-
+    
+    try:
+        #not sure this one is right
+        nltk.data.find('corpora/wordnet')
+    except:    
+        nltk.download('wordnet')
+    
     extension = file.split(".")[-1].lower()
     all_sentences = []
     if extension == "pdf":
