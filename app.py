@@ -111,9 +111,9 @@ def upload_file():
     #os.remove(file.filename)
 
     return jsonify({'sentences': ordered_sentences[:10]})
-'''
-atexit.register(cleanup)
 
+atexit.register(cleanup)
+'''
 if __name__ == '__main__':
     app.run(debug=True) 
 '''
