@@ -1,12 +1,12 @@
 import pandas as pd
 import numpy as np
-import requests
-import json
+#import requests
+#import json
 import os
 import PyPDF2
 from nltk import tokenize
 import string
-import nltk
+#import nltk
 from nltk.stem.wordnet import WordNetLemmatizer
 
 req_keywords = set(["shall", "must", "will","should","require","include"])
