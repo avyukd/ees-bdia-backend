@@ -100,7 +100,7 @@ def get_company_info():
         return jsonify(responseobj)
     except:
         return jsonify({})
-'''
+
 #figure out how to delete file after it closes
 @app.route('/api/parser', methods = ['POST'])
 def upload_file():
@@ -111,7 +111,7 @@ def upload_file():
     #os.remove(file.filename)
 
     return jsonify({'sentences': ordered_sentences[:10]})
-
+'''
 atexit.register(cleanup)
 
 if __name__ == '__main__':
