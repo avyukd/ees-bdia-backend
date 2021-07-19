@@ -112,15 +112,15 @@ def upload_file():
 
     return jsonify({'sentences': ordered_sentences[:10]})
 
-'''@app.route('/api/test/parser',methods=['GET'])
+@app.route('/api/test/parser',methods=['GET'])
 def test_parser():
     parse_RFP("test.pdf")
     return "success"
-'''
+
 
 atexit.register(cleanup)
 
-app.run(debug=True)
+#app.run(debug=True)
 '''
 if __name__ == '__main__':
     app.run(debug=True) 
