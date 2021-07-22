@@ -106,11 +106,11 @@ def get_company_info():
 def upload_file():
     file = request.files['uploadedFile']
     file.save(file.filename)
-    ordered_sentences = parse_RFP(file.filename)
+    parsed_info = parse_RFP(file.filename)
     file.close()
     #os.remove(file.filename)
 
-    return jsonify({'sentences': ordered_sentences[:10]})
+    return jsonify(parsed_info)
 
 @app.route('/api/test/parser',methods=['GET'])
 def test_parser():
