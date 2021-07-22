@@ -114,8 +114,7 @@ def upload_file():
 
 @app.route('/api/test/parser',methods=['GET'])
 def test_parser():
-    parse_RFP("test.pdf")
-    return "success"
+    return parse_RFP("test.pdf")
 
 
 atexit.register(cleanup)

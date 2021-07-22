@@ -62,7 +62,7 @@ def parse_RFP(filepath):
 
     incumbent_matcher = Matcher(nlp.vocab)
     incumbent_patterns = [
-        [{"LOWER":{"IN":["incumbent","current","transition"]}}]
+        [{"LOWER":{"IN":["incumbent","transition"]}}]
     ]
     incumbent_matcher.add("Incumbent",incumbent_patterns)   
     
