@@ -3,11 +3,11 @@ import numpy as np
 #import requests
 #import json
 import os
-import PyPDF2
-from nltk import tokenize
+#import PyPDF2
+#from nltk import tokenize
 import string
-import nltk
-from nltk.stem.wordnet import WordNetLemmatizer
+#import nltk
+#from nltk.stem.wordnet import WordNetLemmatizer
 import textract
 import spacy 
 from spacy.matcher import Matcher
